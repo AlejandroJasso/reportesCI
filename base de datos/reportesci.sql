@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 16-04-2024 a las 16:29:14
+-- Tiempo de generación: 16-04-2024 a las 21:25:11
 -- Versión del servidor: 8.2.0
 -- Versión de PHP: 7.4.33
 
@@ -50,6 +50,32 @@ INSERT INTO `agentes` (`id`, `nombre`, `apellidos`, `curso`, `username`, `passwo
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `autos`
+--
+
+DROP TABLE IF EXISTS `autos`;
+CREATE TABLE IF NOT EXISTS `autos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `marca` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `modelo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `placas` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `fecha_compra` date NOT NULL,
+  `archivo` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `autos`
+--
+
+INSERT INTO `autos` (`id`, `marca`, `modelo`, `placas`, `color`, `fecha_compra`, `archivo`) VALUES
+(1, 'VM', 'Polo', '521CADS', 'Blanco', '2024-04-02', '661edfd04de76profile-02.jpg'),
+(2, 'Ford', 'Figo', '332JBDA1', 'Blanco', '2024-04-16', '661ee439c9017profile-02.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `duenyos`
 --
 
@@ -90,14 +116,16 @@ CREATE TABLE IF NOT EXISTS `reportes` (
   `descripcion` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
   `archivo` text COLLATE utf8mb4_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `reportes`
 --
 
 INSERT INTO `reportes` (`id`, `nombre`, `apellidoP`, `apellidoM`, `contacto`, `fecha_reporte`, `descripcion`, `archivo`) VALUES
-(1, 'Alejandro', 'Jasso', 'Almanza', '4641234567', '2024-04-16', 'Reporte', '661e9ce50c0bfprofile-02.jpg');
+(1, 'Alejandro', 'Jasso', 'Almanza', '4641234567', '2024-04-16', 'Reporte', '661e9ce50c0bfprofile-02.jpg'),
+(2, 'Alejandro', 'Almanza', 'Jasso', '4567890721', '2024-04-16', 'Robo', '661ecdf5cd185profile-02.jpg'),
+(3, 'Jorge', 'Jasso', 'Jasso', '4623456789', '2024-04-09', 'Reporte', '661edc2f406a9profile-02.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
