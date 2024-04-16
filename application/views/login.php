@@ -54,12 +54,12 @@
 		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
 		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
 		            </div> -->
-		            <div class="registration">
+<!-- 		            <div class="registration">
 		                ¿No tienes una cuenta?<br/>
 		                <a class="" href="#">
 		                    Crear una cuenta
 		                </a>
-		            </div>
+		            </div> -->
 		
 		        </div>
 		
@@ -67,7 +67,7 @@
 		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 		              <div class="modal-dialog">
 		                  <div class="modal-content">
-		                      <div class="modal-header">
+<!-- 		                      <div class="modal-header">
 		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		                          <h4 class="modal-title">¿Olvidaste la contraseña?</h4>
 		                      </div>
@@ -76,7 +76,7 @@
 		                          <form action="" method="post">
 		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 		
-		                      </div>
+		                      </div> -->
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
 		                          <button class="btn btn-theme" type="submit">Enviar</button>
