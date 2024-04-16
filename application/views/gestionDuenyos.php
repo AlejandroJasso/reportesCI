@@ -12,7 +12,7 @@
                     <th>Apellidos</th>
                     <th>Nombre de usuario</th>
                     <th>Curso</th>
-                    <th>Editar</th>
+                    <th>Editar</th> 
                 </tr>
             </thead>
             <tbody>

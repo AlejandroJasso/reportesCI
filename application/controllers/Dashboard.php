@@ -84,7 +84,7 @@ class Dashboard extends CI_Controller {
 
 	function catalogoAutos(){
 		if($_SESSION['tipo']=="agente"){
-			$data['duenyos']=$this->Site_model->getDuenyos($_SESSION['curso']);
+			$data['autos']=$this->Site_model->getAutos($_SESSION['curso']);
 			$this->loadViews('catalogoAutos',$data);		
 		}else{
 			redirect(base_url()."Dashboard","location");
@@ -124,7 +124,31 @@ class Dashboard extends CI_Controller {
 			redirect(base_url()."Dashboard","location");
 		}
 		
-	}		
+	}
+
+	function agregarAuto(){
+		if ($_POST) {
+			$config['upload_path']          = './uploads/';
+			$config['allowed_types']        = 'gif|jpg|png';
+			//$config['max_size']             = 100;
+			//$config['max_width']            = 1024;
+			//$config['max_height']           = 768;
+			$config['file_name']=uniqid().$_FILES['archivo']['name'];
+
+			$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('archivo'))
+			{
+				echo "error";
+			}
+			else
+			{
+				$this->Site_model->uploadAuto($_POST,$config['file_name']);
+			}
+		}
+
+		$this->loadViews("agregarAuto");
+	}	
 
 	function loadViews($view,$data=null){
 		//print_r($_SESSION);

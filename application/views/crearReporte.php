@@ -1,7 +1,7 @@
 <section id="main-content">
 	<section class="wrapper">
 			<div class="row">
-				<h2>Crear reporte:</h2>
+				<h2>Crear reporte:</h2> 
 			</div>
 			<!-- Formulario -->
 			<div class="mb-5">
@@ -30,7 +30,7 @@
 						<input type="date" name="fecha_reporte" class="form-control">
 					</div>
 					<div class="form-group col-sm-4">
-						<label for="">Descripción Reporte:</label>
+						<label for="">Descripción reporte:</label>
 						<input type="text" name="descripcion" class="form-control" placeholder="Descripción reporte">
 					</div>					
 				</div>

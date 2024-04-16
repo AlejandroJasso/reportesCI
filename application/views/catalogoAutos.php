@@ -15,14 +15,20 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
+				<?php
+					foreach ($autos as $a){
+				?>
+            	<tr id="rowautos<?= $a->id ?>">
+                	<td><?=$a->marca?></td>
+                	<td><?=$a->modelo?></td>
+                	<td><?=$a->placas?></td>
+                	<td><?=$a->color?></td>
+                	<td><?=$a->fecha_compra?></td>
+                	<td><i class="eliminar fa fa-trash-o" style="cursor:pointer;" id="duenyo-<?= $a->id?>"></i></td>
+            </tr>
+				<?php
+					}
+				?>
 			</tbody>
 		</table>
 	</section>

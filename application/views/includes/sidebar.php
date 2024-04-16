@@ -42,7 +42,13 @@
                           <i class="fa fa-file"></i>
                           <span>Listado de dueños</span>
                       </a>
-                  </li> -->                  
+                  </li> -->   
+                  <li class="sub-menu">
+                      <a href="<?= base_url()?>Dashboard/catalogoAutos">
+                          <i class="fa fa-car"></i>
+                          <span>Catalogo de autos</span>
+                      </a>
+                  </li>                                 
                   <li class="sub-menu">
                       <a href="<?= base_url()?>Dashboard/gestionarReportes">
                           <i class="fa fa-book"></i>
@@ -50,21 +56,21 @@
                       </a>
                   </li>
                   <li class="sub-menu">
-                      <a href="<?= base_url()?>Dashboard/catalogoAutos">
-                          <i class="fa fa-book"></i>
-                          <span>Catalogo de autos</span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="<?= base_url()?>Dashboard/crearReporte">
-                          <i class="fa fa-desktop"></i>
-                          <span>Crear reporte</span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
                       <a href="<?= base_url()?>Dashboard/duenyosAutos">
                           <i class="fa fa-user"></i>
                           <span>Registrar dueños de autos</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="<?= base_url()?>Dashboard/agregarAuto">
+                          <i class="fa fa-desktop"></i>
+                          <span>Registrar auto</span>
+                      </a>
+                  </li>                  
+                  <li class="sub-menu">
+                      <a href="<?= base_url()?>Dashboard/crearReporte">
+                          <i class="fa fa-list"></i>
+                          <span>Crear reporte</span>
                       </a>
                   </li>
 <!--                   <li class="sub-menu">

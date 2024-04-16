@@ -84,8 +84,19 @@
 		public function getReportes($curso){
 			$this->db->select("*");
 			$this->db->from("reportes");
-/*			$this->db->where("curso",$curso);
-			$this->db->where("deleted",0);*/
+
+			$query=$this->db->get();
+			//print_r($this->db->last_query());
+			if ($query->num_rows()>0) {
+				return $query->result();
+			}else{
+				return NULL;
+			}
+		}
+
+		public function getAutos($curso){
+			$this->db->select("*");
+			$this->db->from("autos");
 
 			$query=$this->db->get();
 			//print_r($this->db->last_query());
@@ -104,7 +115,6 @@
 			$this->db->update("duenyos", $array);
 		}
 
-		
 		function uploadReporte($data,$archivo){
 			$array=array(
 				"nombre"=>$data['nombre'],
@@ -116,5 +126,17 @@
 				"archivo"=>$archivo,
 			);
 			$this->db->insert("reportes",$array);
-		}			
+		}
+
+		function uploadAuto($data,$archivo){
+			$array=array(
+				"marca"=>$data['marca'],
+				"modelo"=>$data['modelo'],
+				"placas"=>$data['placas'],
+				"color"=>$data['color'],
+				"fecha_compra"=>$data['fecha_compra'],
+				"archivo"=>$archivo,
+			);
+			$this->db->insert("autos",$array);
+		}
 	}
