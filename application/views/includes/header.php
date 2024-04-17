@@ -192,7 +192,8 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Cerrar sesión</a></li>
+                    <!--<li><a class="logout" href="login.html">Cerrar sesión</a></li>-->
+                    <li><a class="logout" href="<?php echo site_url('Dashboard/logout'); ?>">Cerrar sesión</a></li>
             	</ul>
             </div>
         </header>

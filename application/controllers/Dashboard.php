@@ -44,6 +44,12 @@ class Dashboard extends CI_Controller {
 		$this->loadViews('login');
 	}
 
+	public function logout()
+	{
+    	$this->session->sess_destroy(); // Destruye toda la información registrada de una sesión
+    	redirect(base_url()."Dashboard","login");// Redirige al usuario a la vista de login
+	}	
+
 	function eliminarDuenyo(){
 
 		if ($_POST['idduenyo']) {
