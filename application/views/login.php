@@ -43,7 +43,7 @@
 		            <input name="password" type="password" class="form-control" placeholder="Contraseña">
 		            <label class="checkbox">
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> ¿Olvidaste la contraseña?</a>
+<!-- 		                    <a data-toggle="modal" href="login.html#myModal"> ¿Olvidaste la contraseña?</a> -->
 		                </span>
 		            </label>
 		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> ENTRAR</button>
