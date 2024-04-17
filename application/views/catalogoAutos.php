@@ -6,12 +6,12 @@
 		<table id="catalogoAutos" class="display" style="width:100%">
 			<thead>
 				<tr>
-					<th># Auto</th>
 					<th>Marca</th>
 					<th>Modelo</th>
 					<th>Num. Placa</th>
 					<th>Color</th>
 					<th>Fecha de compra</th>
+					<th>Editar</th>
 				</tr>
 			</thead>
 			<tbody>
