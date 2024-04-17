@@ -21,7 +21,7 @@ class Dashboard extends CI_Controller {
 			//print_r($login);
 			if($login){
 				$array=array(
-					"id"=>$login[0]->id,
+					"id"=>$login[0]->id,	
 					"nombre"=>$login[0]->nombre,
 					"apellidos"=>$login[0]->apellidos,
 					"username"=>$login[0]->username,
@@ -50,6 +50,16 @@ class Dashboard extends CI_Controller {
     	redirect(base_url()."Dashboard","login");// Redirige al usuario a la vista de login
 	}	
 
+
+	public function registrar()
+	{
+		$this->load->view('registrar');
+	}
+
+	public function registrar_formAgente(){
+		$this->Site_model->registrar_agente();
+	}
+
 	function eliminarDuenyo(){
 
 		if ($_POST['idduenyo']) {
@@ -57,6 +67,12 @@ class Dashboard extends CI_Controller {
 		}
 	}
 
+	function eliminarReporte(){
+
+		if ($_POST['idreporte']) {
+			$this->Site_model->deleteReporte($_POST['idreporte']);
+		}
+	}	
 
 	function gestionDuenyos(){
 		if($_SESSION['tipo']=="agente"){

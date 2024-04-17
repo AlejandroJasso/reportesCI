@@ -26,16 +26,11 @@
   </head>
 
   <body>
-
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
+     <!--MAIN CONTENT-->
 
 	  <div id="login-page">
 	  	<div class="container">
-	  	
 		      <form class="form-login" action="" method="post">
-		      <!--<form class="form-login" action="index.html">-->
 		        <h2 class="form-login-heading">Iniciar sesion</h2>
 		        <div class="login-wrap">
 		            <input name="username" type="text" class="form-control" placeholder="Usuario" autofocus>
@@ -43,49 +38,17 @@
 		            <input name="password" type="password" class="form-control" placeholder="Contraseña">
 		            <label class="checkbox">
 		                <span class="pull-right">
-<!-- 		                    <a data-toggle="modal" href="login.html#myModal"> ¿Olvidaste la contraseña?</a> -->
+											<!--<a data-toggle="modal" href="login.html#myModal"> ¿Olvidaste la contraseña?</a>-->
 		                </span>
 		            </label>
 		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> ENTRAR</button>
 		            <hr>
-		            
-<!-- 		            <div class="login-social-link centered">
-		            <p>or you can sign in via your social network</p>
-		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
-		            </div> -->
-<!-- 		            <div class="registration">
-		                ¿No tienes una cuenta?<br/>
-		                <a class="" href="#">
-		                    Crear una cuenta
-		                </a>
-		            </div> -->
-		
+						<div class="card-footer py-3 border-0">
+							<div class="text-center">
+								¿No tienes una cuenta? <a href="<?= base_url()?>Dashboard/registrar" class="text-dark">Crear una</a>
+							</div>
+						</div>		            
 		        </div>
-		
-		          <!-- Modal -->
-		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-		              <div class="modal-dialog">
-		                  <div class="modal-content">
-<!-- 		                      <div class="modal-header">
-		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                          <h4 class="modal-title">¿Olvidaste la contraseña?</h4>
-		                      </div>
-		                      <div class="modal-body">
-		                          <p>Ingresa tu correo para resetear tu contraseña</p>
-		                          <form action="" method="post">
-		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-		
-		                      </div> -->
-		                      <div class="modal-footer">
-		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
-		                          <button class="btn btn-theme" type="submit">Enviar</button>
-		                          </form>
-		                      </div>
-		                  </div>
-		              </div>
-		          </div>
-		          <!-- modal -->
 		      </form>	  	
 	  	</div>
 	  </div>
