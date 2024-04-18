@@ -33,7 +33,7 @@
 		      <form class="form-login" action="" method="post">
 		        <h2 class="form-login-heading">Iniciar sesion</h2>
 		        <div class="login-wrap">
-		            <input name="username" type="text" class="form-control" placeholder="Usuario" autofocus>
+		            <input name="username" type="email" class="form-control" placeholder="Correo" autofocus>
 		            <br>
 		            <input name="password" type="password" class="form-control" placeholder="Contraseña">
 		            <label class="checkbox">

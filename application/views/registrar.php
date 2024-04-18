@@ -20,8 +20,8 @@
 					</div>
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
+							<form method="post" accept-charset="utf-8" action="<?= base_url()?>Dashboard/registrar_formAgente">
 								<h1 class="fs-4 card-title fw-bold mb-4">Registrar</h1>
-								<?php echo form_open('Dashboard/registrar_formAgente'); ?>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">Nombre:</label>
 									<input name="nombre" type="text" class="form-control" value="" required autofocus>
@@ -39,11 +39,11 @@
 									<input name="con_password" type="password" class="form-control" required>
 								</div>
 								<div class="d-flex align-items-center">
-									<button type="submit" class="btn btn-primary ">
+									<button type="submit" class="btn btn-primary">
 										Registrar
 									</button>
 								</div>
-								<?php echo form_close(); ?>
+							</form>
 						</div>
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">

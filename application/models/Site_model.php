@@ -66,7 +66,7 @@ class Site_model extends CI_Model
 				$data=array(
 					"nombre"=>$this->input->post('nombre'),
 					"username"=>$this->input->post('username'),
-					"password"=>$password
+					"password" => md5($password) // Encripta la contraseña con MD5 antes de almacenarla
 				);
 				$this->db->insert('agentes',$data);
 				$this->session->set_flashdata('suc','Ya te encuentras registrado, inicia sesión');
@@ -74,7 +74,6 @@ class Site_model extends CI_Model
 
 			}
 		}
-
 
 		public function updateAgente() //Funcion para actualizar datos en la DB
 		{

@@ -56,7 +56,8 @@ class Dashboard extends CI_Controller {
 		$this->load->view('registrar');
 	}
 
-	public function registrar_formAgente(){
+	public function registrar_formAgente()
+	{
 		$this->Site_model->registrar_agente();
 	}
 
