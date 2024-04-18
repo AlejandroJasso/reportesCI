@@ -41,23 +41,16 @@ class Dashboard extends CI_Controller {
 	//Duenyos
 	function eliminarDuenyo(){
 		if ($_POST['idduenyo']) {
+			$this->load->model('duenyos/Duenyos_model');
 			$this->Site_model->deleteDuenyo($_POST['idduenyo']);
 		}
 	}
 
 	function gestionDuenyos(){
 		if($_SESSION['tipo'] == "agente"){
-			$data['duenyos'] = $this->Site_model->getDuenyos($_SESSION['curso']);
+			$this->load->model('duenyos/Duenyos_model');
+			$data['duenyos'] = $this->Duenyos_model->getDuenyos($_SESSION['curso']);
 			$this->loadViews('gestionduenyos', $data);      
-		} else {
-			redirect(base_url()."Dashboard", "location");
-		}
-	}
-
-	function listadoDuenyos(){
-		if($_SESSION['tipo'] == "agente"){
-			$data['duenyos'] = $this->Site_model->getDuenyos($_SESSION['curso']);
-			$this->loadViews('listadoDuenyos', $data);      
 		} else {
 			redirect(base_url()."Dashboard", "location");
 		}
@@ -65,7 +58,8 @@ class Dashboard extends CI_Controller {
 
 	function duenyosAutos(){
 		if($_SESSION['tipo'] == "agente"){
-			$data['duenyos'] = $this->Site_model->getDuenyos($_SESSION['curso']);
+			$this->load->model('duenyos/Duenyos_model');
+			$data['duenyos'] = $this->Duenyos_model->getDuenyos($_SESSION['curso']);
 			$this->loadViews('duenyosAutos', $data);      
 		} else {
 			redirect(base_url()."Dashboard", "location");
@@ -120,7 +114,8 @@ class Dashboard extends CI_Controller {
 			if (!$this->upload->do_upload('archivo')) {
 				echo "error";
 			} else {
-				$this->Site_model->uploadAuto($_POST, $config['file_name']);
+				$this->load->model('autos/Autos_model');
+				$this->Autos_model->uploadAuto($_POST, $config['file_name']);
 			}
 		}
 		$this->loadViews("agregarAuto");
@@ -128,7 +123,8 @@ class Dashboard extends CI_Controller {
 
 	function catalogoAutos(){
 		if($_SESSION['tipo'] == "agente"){
-			$data['autos'] = $this->Site_model->getAutos($_SESSION['curso']);
+			$this->load->model('autos/Autos_model');
+			$data['autos'] = $this->Autos_model->getAutos($_SESSION['curso']);
 			$this->loadViews('catalogoAutos', $data);      
 		} else {
 			redirect(base_url()."Dashboard", "location");
