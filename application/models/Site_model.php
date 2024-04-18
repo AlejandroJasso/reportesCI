@@ -54,7 +54,7 @@ class Site_model extends CI_Model
 			}
 		}
 
-		public function registrar_agente(){
+/*		public function registrar_agente(){
 
 			$password=$this->input->post('password');
 			$con_password=$this->input->post('con_password');
@@ -73,7 +73,7 @@ class Site_model extends CI_Model
 				redirect(base_url()."Dashboard","location");
 
 			}
-		}
+		}*/
 
 		public function updateAgente() //Funcion para actualizar datos en la DB
 		{

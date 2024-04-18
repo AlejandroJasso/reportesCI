@@ -44,9 +44,12 @@
 		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> ENTRAR</button>
 		            <hr>
 						<div class="card-footer py-3 border-0">
-							<div class="text-center">
+<!-- 							<div class="text-center">
 								¿No tienes una cuenta? <a href="<?= base_url()?>Dashboard/registrar" class="text-dark">Crear una</a>
-							</div>
+							</div> -->
+              <div class="text-center">
+                ¿No tienes una cuenta? <a href="<?= base_url()?>registrar_agentes/Registrar_agentes/registrar" class="text-dark">Crear una</a>
+              </div>              
 						</div>		            
 		        </div>
 		      </form>	  	

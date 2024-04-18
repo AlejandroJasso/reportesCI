@@ -51,7 +51,7 @@ class Dashboard extends CI_Controller {
 	}	
 
 
-	public function registrar()
+/*	public function registrar()
 	{
 		$this->load->view('registrar');
 	}
@@ -59,7 +59,7 @@ class Dashboard extends CI_Controller {
 	public function registrar_formAgente()
 	{
 		$this->Site_model->registrar_agente();
-	}
+	}*/
 
 	function eliminarDuenyo(){
 
