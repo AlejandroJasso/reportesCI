@@ -22,7 +22,7 @@
 						<div class="card-body p-5">
 							<!-- <form method="post" accept-charset="utf-8" action="<?= base_url()?>Dashboard/registrar_formAgente"> -->
 							<form method="post" accept-charset="utf-8" action="<?= base_url()?>registrar_agentes/Registrar_Agentes/registrar_formAgente">	
-								<h1 class="fs-4 card-title fw-bold mb-4">Registrar</h1>
+								<h1 class="fs-4 card-title fw-bold mb-4">Registrar usuario</h1>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">Nombre:</label>
 									<input name="nombre" type="text" class="form-control" value="" required autofocus>
